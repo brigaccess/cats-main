@@ -173,7 +173,7 @@ sub problems_submit
     $t->param(solution_submitted => 1, href_console => url_f('console'));
     $time_since_finish > 0 ? msg(1087) :
     defined $prev_reqs_count ?
-        msg(1088, $contest->{max_reqs} - $prev_reqs_count - 1) : msg(1014);
+        msg(1088, $contest->{max_reqs} - $prev_reqs_count - 1) : msg(1014, $rid);
 }
 
 sub problems_submit_std_solution {
